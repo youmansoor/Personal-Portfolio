@@ -1,464 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="robots" content="index, follow">
-<meta name="description" content="Portfolio of Yousuf Mansoor, a Front-End Web Developer specializing in HTML, CSS, JS, WordPress, and SEO.">
-<meta name="keywords" content="Web Developer, Front-End, HTML, CSS, JavaScript, WordPress, SEO, Portfolio, Yousuf Mansoor">
-<meta name="author" content="Yousuf Mansoor">
-<meta name="google-site-verification" content="7zLFsWMbyfaC70zsT7Efi85CmvDWVFS-4ydZlYGvfp8" />
-<link rel="canonical" href="https://youmansoor.github.io/Personal-Portfolio/">
-
-<!-- Open Graph / Facebook -->
-<meta property="og:title" content="Yousuf Mansoor | Front-End Web Developer">
-<meta property="og:description" content="Explore professional web development projects, skills, and tools.">
-<meta property="og:image" content="https://youmansoor.github.io/Personal-Portfolio/preview-image.png">
-<meta property="og:url" content="https://youmansoor.github.io/Personal-Portfolio/">
-<meta property="og:type" content="website">
-
-<!-- Twitter -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Yousuf Mansoor | Front-End Web Developer">
-<meta name="twitter:description" content="Explore professional web development projects, skills, and tools.">
-<meta name="twitter:image" content="https://youmansoor.github.io/Personal-Portfolio/preview-image.png">
-
-<title>Yousuf Mansoor | Front-End Web Developer Portfolio</title>
-    <style>
-    * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-html {
-    scroll-behavior: smooth;
-}
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #222;
-    position: sticky;
-    padding: 2vh;
-    top: 0;
-    z-index: 1000;
-}
-header h1 {
-    color: #fff;
-    font-size: 5vh;
-    cursor: default;
-}
-nav .btn {
-    display: none;
-}
-nav .navbar {
-    list-style: none;
-    display: flex;
-    gap: 30px;
-}
-nav .navbar li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 3.2vh;
-    padding: 2vh;
-    border-radius: 2vh;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-nav .navbar li a.active {
-    background-color: #03dffc;
-    color: #000;
-    font-weight: bold;
-    box-shadow: 0 0 10px rgba(3, 223, 252, 0.5);
-}
-nav ul.navbar li a:hover,
-nav ul.navbar li a:focus {
-    background-color: #fff;
-    color: #222;
-    box-shadow: 0 2px 6px rgba(255, 255, 255, 0.6);
-    outline: none;
-}
-@media (max-width: 768px) {
-    /* Ensure the nav takes up right side */
-    header {
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-    }
-
-    nav {
-        position: relative;
-    }
-
-    nav .btn {
-        display: block;
-        background-color: #fff;
-        font-size: 4vh;
-        color: #222;
-        padding: 0.8vh 2vh;
-        border: none;
-        border-radius: 0.5vh;
-        cursor: pointer;
-        box-shadow: 0 2px 6px rgba(255, 255, 255, 0.6);
-    }
-
-    nav .navbar {
-        display: none;
-        flex-direction: column;
-        align-items: center;
-        position: absolute;
-        top: 100%; /* Dropdown below button */
-        right: 0; /* Align with right edge */
-        width: 100vw;
-        background-color: #222;
-        padding: 2vh 0;
-        z-index: 999;
-    }
-
-    nav .navbar li a {
-        display: block;
-        width: 100%;
-        padding: 10px 15px;
-        text-align: center;
-    }
-}
-/* main */
-#main {
-    width: 100%;
-    background-color: #000661;
-    height: 90vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-#main .div {
-    width: 80%;
-    height: 80%;
-    background-color: rgba(255, 255, 255, 0.3);
-    border-radius: 2vh;
-    padding: 10vh;
-    font-family: monospace;
-    font-size: 4.5vh;
-    color: #fff;
-}
-#main .div .btn {
-    display: flex;
-    align-self: center;
-    justify-self: center;
-    margin-top: 4vh;
-    padding: 2vh;
-    border: 0.5vh solid #03dffc;
-    border-radius: 2vh;
-    background-color: transparent;
-    color: #fff;
-    font-size: 3vh;
-    cursor: pointer;
-}
-#main .div .btn a {
-    color: #fff;
-    text-decoration: none;
-}
-#main .div .btn:hover {
-    background-color: #03dffc;
-    color: #000;
-    box-shadow:5px 5px 5px 5px rgb(3, 223, 252);
-}
-/* about */
-#about {
-    width: 100%;
-    min-height: 90vh;
-    background-color: #001080;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-#about .About {
-    margin-top: 10vh;
-    margin-bottom: 4vh;
-    display: flex;
-    width: 80%;
-    height: auto;
-    font-size: 4.5vh;
-    color: #fff;
-}
-#about .About .abt {
-    width: 65%;
-}
-#about .About .abt h1 {
-    text-decoration: underline;
-}
-#about .About .abt p {
-    margin-top: 4vh;
-}
-#more {
-    transition: all 0.3s ease;
-}
-button {
-    margin-top: 4vh;
-    padding: 2vh;
-    border: 0.5vh solid #03dffc;
-    border-radius: 2vh;
-    background-color: transparent;
-    color: #fff;
-    font-size: 3vh;
-    cursor: pointer;
-}
-#about .About .img {
-    width: 35%;
-    margin-top: 10vh;
-    border: 1vh solid #03dffc;
-    border-radius: 10vh;
-}
-/* projects */
-#projects {
-    width: 100%;
-    min-height: 90vh;
-    background-color: #0346c4;
-    color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-#projects .container {
-    margin-top: 10vh;
-    width: 80%;
-    height: auto;
-    font-size: 4.5vh;
-}
-#projects .cont {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-#projects .container .cont .box {
-    width: 45%;
-    min-height: 30%;
-    background-color: #001b80;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5), 0 0 10px rgba(3, 223, 252, 0.2);
-    border-radius: 2vh;
-    font-size: 3.5vh;
-    color: #fff;
-    margin: 3vh;
-    transition: transform 0.3s ease;
-}
-#projects .container .cont .box:hover {
-    transform: translateY(-8px);
-}
-#projects .container .box img {
-    margin-bottom: 2vh;
-    border-radius: 1vh;
-    object-fit: cover;
-}
-#projects .container .cont .box h1 {
-    margin-bottom: 1.5vh;
-    color: #03dffc;
-    padding: 3vh;
-}
-#projects .container .cont .box p {
-    padding: 3vh;
-}
-.project-links {
-  display: flex;
-  justify-content: space-between;
-  padding: 0 15px 15px;
-}
-
-.project-links a {
-  color: #03dffc;
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.2s ease;
-}
-
-.project-links a:hover {
-  color: #03dffc;
-}
-/* skills */
-#skills {
-    width: 100%;
-    min-height: 90vh;
-    background-color: #0024b3;
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    padding-top: 10vh;
-}
-#skills .Cont {
-    width: 80%;
-    height: auto;
-    font-size: 4vh;
-}
-#skills .Cont .skill {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-#skills .Cont .skill .block {
-    width: 40%;
-    height: 40%;
-    padding: 3vh;
-    margin: 4vh;
-    border: 1px solid #03dffc;
-    border-radius: 2vh;
-    box-shadow: 0 0 15px #03dffc88;
-    transition: box-shadow 0.3s ease;
-}
-#skills .Cont .skill .block ul {
-  list-style: none;
-  padding-left: 0;
-  margin-top: 1vh;
-  font-size: 3vh;
-  color: #e0e7ff;
-}
-
-#skills .Cont .skill .block ul li {
-  margin-bottom: 0.8vh;
-  position: relative;
-  padding-left: 1.5vh;
-}
-
-#skills .Cont .skill .block ul li::before {
-  color: #03dffc;
-  position: absolute;
-  left: 0;
-  top: 0;
-  font-weight: bold;
-}
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>John Doe | Creative Developer</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600&family=Syne:wght@700&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
-    <header>
-        <h1>Portfolio.</h1>
-        <nav>
-            <button class="btn" type="button" onclick="menu()">Menu</button>
-            <ul class="navbar">
-                <li><a href="#main">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#exp/edu">Exp/Edu</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <section id="main">
-        <div class="div">
-            <h1>HI,I am <span style="color: #03dffc; text-decoration: underline;">Yousuf</span>.</h1>
-            <h2>I’m a Responsive Web Developer,<br>Front-End Specialist & WordPress Expert.</h2>
-            <button class="btn" type="button"><a href="#projects">View my Projects</a></button>
-        </div>
-    </section>
-    <section id="about">
-        <div class="About">
-            <div class="abt">
-                <h1><span style="color: #03dffc; text-decoration: underline;">About</span> Myself<span style="color: #03dffc;">.</span></h1>
-                <p>Hi, I'm [Your Name], a passionate and detail-oriented Responsive Web Developer with a strong focus on creating clean, modern, and user-friendly websites. With a deep understanding of HTML, CSS, JavaScript, and modern frameworks, I specialize in building interactive front-end interfaces that not only look great but perform seamlessly across all devices.
-                    As a Front-End Specialist, I pay close attention to UI/UX principles, accessibility standards, and performance optimization. Whether it's crafting pixel-perfect layouts or integrating APIs, I bring both creativity and functionality to every project.
-                    I'm also a seasoned WordPress Expert, experienced in building custom themes, optimizing performance, and managing content efficiently.<span id="dots">...</span><span id="more" style="display: none;"> From simple blogs to dynamic business websites, I help clients transform their ideas into powerful digital experiences.
-                    When I’m not coding, you’ll find me exploring new web trends, refining my design skills, or contributing to open-source projects.
-                    Let’s build something amazing together!</span></p>
-                    <button onclick="toggleReadMore()" id="readMoreBtn">Read more</button>
-            </div>
-            <div class="img">
-                <img src="final logo-01.jpg" alt="" width="100%">
-            </div>
-        </div>
-    </section>
-    <section id="projects">
-        <div class="container">
-            <h1>My <span style="color: #03dffc; text-decoration: underline;">Projects</span>.</h1>
-            <div class="cont">
-                <div class="box">
-                    <img src="WWG.png" alt="" width="100%">
-                    <h1>WorldWondersGuide</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim nisi dolore corrupti, blanditiis ratione incidunt tenetur illum soluta nihil ducimus mollitia! Quam a praesentium, quasi molestias obcaecati neque molestiae eius.</p>
-                    <div class="project-links">
-                        <a href="https://youmansoor.github.io/" target="_blank">Live Demo</a>
-                        <a href="https://github.com/youmansoor/youmansoor.github.io" target="_blank">Github</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="skills">
-        <div class="Cont">
-            <h1>My <span style="color: #03dffc; text-decoration: underline;">Skills</span>.</h1>
-            <div class="skill">
-                <div class="block">
-                    <h2>Languages</h2>
-                    <ul>
-                        <li>HTML5</li>
-                        <li>CSS3</li>
-                        <li>JavaScript</li>
-                        <li>PHP</li>
-                    </ul>
-                </div>
-                <div class="block">
-                    <h2>Libraries & Tools</h2>
-                    <ul>
-                        <li>JSON</li>
-                        <li>jQuery</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="skill" style="margin-top: 4vh;">
-                <div class="block">
-                    <h2>Platforms</h2>
-                    <ul>
-                        <li>Git & GitHub</li>
-                        <li>Visual Studio Code</li>
-                        <li>WordPress</li>
-                    </ul>
-                </div>
-                <div class="block">
-                    <h2>Design</h2>
-                    <ul>
-                        <li>Figma</li>
-                        <li>SEO</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-    <script>
-        function toggleReadMore() {
-  var dots = document.getElementById("dots");
-  var moreText = document.getElementById("more");
-  var btnText = document.getElementById("readMoreBtn");
 
-  if (dots.style.display === "none") {
-    dots.style.display = "inline";
-    btnText.innerHTML = "Read more";
-    moreText.style.display = "none";
-  } else {
-    dots.style.display = "none";
-    btnText.innerHTML = "Read less";
-    moreText.style.display = "inline";
-  }
-}
-const sections = document.querySelectorAll("section");
-  const navLinks = document.querySelectorAll("nav .navbar li a");
+  <!-- HERO -->
+  <section class="hero">
+    <div id="hero-box">
+  <div class="hero-content-wrapper">
+  <div class="hero-text">
+    <h1>Hello, I'm <br><span class="highlight">John Doe</span></h1>
+    <p class="subtitle">I am a Full-Stack Web Developer passionate about building clean, user-friendly websites.</p>
+    <a href="resume/pdf-test.pdf" class="btn secondary" download>Download My CV</a>
+    <a href="#portfolio" class="btn">See My Work</a>
+  </div>
+  <div class="hero-img">
+    <img src="index.png" alt="John Doe - Full-Stack Developer" />
+  </div>
+</div>
 
-  window.addEventListener("scroll", () => {
-    let current = "";
+  <!-- Glowing HTML Tags -->
+  <div class="floating-tags">
+    <span class="tag">&lt;div&gt;</span>
+    <span class="tag">&lt;/div&gt;</span>
+    <span class="tag">&lt;h1&gt;</span>
+    <span class="tag">&lt;/h1&gt;</span>
+    <span class="tag">&lt;section&gt;</span>
+    <span class="tag">&lt;/section&gt;</span>
+  </div>
+  </div>
+</section>
 
-    sections.forEach((section) => {
-      const sectionTop = section.offsetTop;
-      const sectionHeight = section.offsetHeight;
+<!-- ABOUT -->
+<section id="about" class="about">
+  <div class="about-wrapper">
+    <!-- About Text -->
+    <div class="about-text" data-aos="fade-right">
+      <h2>About Me</h2>
+      <p>
+        I’m a <strong>Full-Stack Web Developer</strong> passionate about creating clean, user-friendly websites and web apps. 
+        With expertise in <strong>HTML, CSS, JavaScript, Laravel, WordPress</strong>, and more, I love combining logical thinking with creative design. 
+        Whether it's building custom features or improving SEO, I'm always up for a challenge.
+      </p>
+    </div>
 
-      if (scrollY >= sectionTop - sectionHeight / 3) {
-        current = section.getAttribute("id");
-      }
-    });
+    <!-- About Image -->
+    <div class="about-img" data-aos="fade-left">
+      <img src="index.png" alt="About John Doe" />
+    </div>
+  </div>
+</section>
 
-    navLinks.forEach((link) => {
-      link.classList.remove("active");
-      if (link.getAttribute("href") === `#${current}`) {
-        link.classList.add("active");
-      }
-    });
-  });
-    </script>
+<!--PORTFOLIO-->
+<section id="portfolio" class="portfolio">
+  <h2>My Work</h2>
+  <div class="project-grid">
+    <div class="project-card" data-aos="fade-up">
+      <img src="index.png" alt="WorldWondersGuide" />
+      <h3>WorldWondersGuide</h3>
+      <p>WorldWondersGuide is an interactive site showcasing iconic global monuments with stunning visuals and insightful descriptions to inspire and educate visitors.</p>
+      <a href="http://youmansoor.github.io/" target="_blank" class="btn">View Project</a>
+    </div>
+
+    <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+      <img src="images/project2.png" alt="Project 2 Screenshot" />
+      <h3>Project Two</h3>
+      <p>Custom WordPress theme development with SEO optimization.</p>
+      <a href="https://github.com/yourusername/project2" target="_blank" class="btn">View Project</a>
+    </div>
+    <!-- Add more project cards here -->
+  </div>
+</section>
+
+<!--REVIEW-->
+<section id="reviews" class="reviews">
+  <h2>Client Reviews</h2>
+  <div class="review-cards">
+    <div class="review-card" data-aos="fade-up">
+      <p>"Loving the portfolio site clean, professional, and super easy to use! 😍
+Really appreciate how quick you were to make tweaks and how well you understood my vision.
+Working with you was smooth and fun!
+If I notice anything later, I’ll let you know but for now, great job & thank you! 🙌"</p>
+      <h4>- Freelancer, Designer</h4>
+    </div>
+
+    <!-- Add more review cards as needed -->
+  </div>
+</section>
+
+<!--SKILLS-->
+<section id="skills" class="skills">
+  <h2>My Skills</h2>
+  <div class="skills-grid">
+    <div class="skill-card">
+      <h3>Frontend</h3>
+      <ul>
+        <li>HTML5</li>
+        <li>CSS3</li>
+        <li>JavaScript</li>
+        <li>jQuery</li>
+      </ul>
+    </div>
+
+    <div class="skill-card">
+      <h3>Backend</h3>
+      <ul>
+        <li>PHP</li>
+        <li>Laravel</li>
+        <li>MySQL</li>
+      </ul>
+    </div>
+
+    <div class="skill-card">
+      <h3>Tools & Tech</h3>
+      <ul>
+        <li>Git & GitHub</li>
+        <li>WordPress</li>
+        <li>Figma</li>
+        <li>JSON</li>
+      </ul>
+    </div>
+
+    <div class="skill-card">
+      <h3>Optimization</h3>
+      <ul>
+        <li>SEO</li>
+        <li>Responsive Design</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!--CONTACT-->
+<section id="contact" class="contact">
+  <h2>Get In Touch</h2>
+  <p class="contact-intro">Have a project in mind, a question, or just want to say hello? I'm always open to discussing new opportunities.</p>
+
+  <form class="contact-form" action="https://formspree.io/f/xdkdrloz" method="POST" enctype="text/plain">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+    <button type="submit" class="btn">Send Message</button>
+  </form>
+
+  <div class="contact-info">
+  <a href="mailto:your-email@example.com">
+    <i class="fas fa-envelope"></i>
+    Email
+  </a>
+  <a href="https://github.com/youmansoor" target="_blank">
+    <i class="fab fa-github"></i>
+    Github
+  </a>
+</div>
+</section>
+
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
 </body>
 </html>
