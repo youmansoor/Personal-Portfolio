@@ -27,7 +27,7 @@ a {
   color: #fff;
   position: relative;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -39,7 +39,7 @@ a {
   /* align-items: center; */
   background-color: rgba(0, 0, 0, 0.4);
   width: 80%;
-  height: 80vh;
+  min-height: 80vh;
   border-radius: 20px;
   position: relative;
   z-index: 2;
@@ -149,30 +149,50 @@ a {
   100% { transform: translateY(0) rotate(0deg); opacity: 0.8; }
 }
 @media (max-width: 768px) {
-  .hero-content-wrapper {
-    flex-direction: column;
-    text-align: center;
-  }
 
   .hero-text {
-    order: 2;
+    /* order: 2; */
   }
 
   .hero-img {
     order: 1;
     margin-bottom: 20px;
   }
-  .hero h1 {
-    font-size: 2.2rem;
+
+  .hero-text h1 {
+    font-size: 6vh;
   }
 
   .subtitle {
-    font-size: 1rem;
+    font-size: 3vh;
   }
 
   .btn {
-    padding: 10px 24px;
     font-size: 0.9rem;
+    padding: 10px 24px;
+  }
+
+  .floating-tags {
+    display: block; /* Hide on small screens for clarity */
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-content-wrapper {
+    flex-direction: column;
+  }
+  .hero-text {
+    width: 100%;
+  }
+  .hero-text h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero-img {
+    margin-top: 15vh;
+  }
+  .subtitle {
+    font-size: 0.95rem;
   }
 }
 
@@ -180,7 +200,6 @@ a {
 .about {
   background-color: #111; /* very dark, near black */
   padding: 80px 60px;
-  width: 100%;
   color: #eee; /* light text for contrast */
 }
 
@@ -239,6 +258,17 @@ a {
 }
 
 /* Responsive */
+@media (max-width: 992px) {
+  .about-text h2 {
+    font-size: 2.2rem;
+  }
+
+  .about-text p {
+    font-size: 1.05rem;
+  }
+}
+
+/* Mobile */
 @media (max-width: 768px) {
   .about-wrapper {
     flex-direction: column;
@@ -251,6 +281,25 @@ a {
 
   .about-text p {
     font-size: 1rem;
+  }
+
+  .about-img {
+    margin-top: 30px;
+  }
+}
+
+/* Extra small screens (phones < 480px) */
+@media (max-width: 480px) {
+  .about {
+    padding: 60px 16px;
+  }
+
+  .about-text h2 {
+    font-size: 1.8rem;
+  }
+
+  .about-text p {
+    font-size: 0.95rem;
   }
 }
 /* Project Cards */
