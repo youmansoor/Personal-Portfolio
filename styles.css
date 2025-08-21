@@ -523,15 +523,14 @@ a {
 .reviews {
   background-color: #111; /* match About and Portfolio bg */
   color: #eee;
-  padding: 70px 20px 100px; /* smaller horizontal padding for very small screens */
+  padding: 70px 40px 100px;
   text-align: center;
   width: 100%;
   margin: 0 auto;
-  box-sizing: border-box;
 }
 
 .reviews h2 {
-  font-size: clamp(1.8rem, 4vw, 2.75rem); /* fluid font size */
+  font-size: 2.75rem;
   margin-bottom: 50px;
   color: #ff5e62;
   font-weight: 700;
@@ -542,21 +541,17 @@ a {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  gap: 30px; /* smaller gap for smaller screens */
-  align-items: center; /* center cards on small screens */
-  max-width: 1200px;
-  margin: 0 auto;
+  gap: 40px;
 }
 
 .review-card {
   background: #1a1a1a;
-  width: 100%; /* full width on small screens */
-  max-width: 500px; /* max width so cards don't get too wide */
+  width: 40%;
   padding: 25px 30px;
   border-radius: 15px;
   box-shadow: 0 8px 25px rgba(255, 94, 98, 0.3);
   font-style: italic;
-  font-size: clamp(1rem, 2vw, 1.1rem);
+  font-size: 1.1rem;
   color: #ddd;
   transition: box-shadow 0.3s ease;
 }
@@ -570,33 +565,79 @@ a {
   font-weight: 700;
   color: #ff5e62;
   font-style: normal;
-  font-size: clamp(0.9rem, 1.5vw, 1rem);
+  font-size: 1rem;
 }
 
-/* Tablet and up */
-@media (min-width: 600px) {
-  .review-cards {
-    flex-direction: row;
-    justify-content: center;
-    gap: 40px;
-  }
-
-  .review-card {
-    width: 45%;
-  }
-}
-
-/* Large desktops */
+/* Responsive */
 @media (min-width: 1200px) {
-  .review-cards {
-    gap: 50px;
+  .reviews h2 {
+    font-size: 3.5rem;
+    margin-bottom: 70px;
   }
-
+  
   .review-card {
-    width: 40%;
+    width: 30%; /* show 3 cards side by side if you add more */
+    font-size: 1.2rem;
+    padding: 30px 35px;
   }
 }
 
+/* Tablets and medium devices */
+@media (max-width: 992px) {
+  .review-card {
+    width: 45%; /* 2 cards side by side */
+    font-size: 1.1rem;
+    padding: 25px 25px;
+  }
+}
+
+/* Small tablets and large phones */
+@media (max-width: 768px) {
+  .reviews {
+    padding: 60px 25px 80px;
+  }
+  
+  .reviews h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+  }
+
+  .review-cards {
+    flex-direction: column; /* stack cards vertically */
+    gap: 30px;
+  }
+
+  .review-card {
+    width: 100%; /* full width */
+    font-size: 1rem;
+    padding: 20px 20px;
+  }
+
+  .review-card h4 {
+    font-size: 0.95rem;
+  }
+}
+
+/* Extra small phones */
+@media (max-width: 480px) {
+  .reviews {
+    padding: 50px 15px 60px;
+  }
+
+  .reviews h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+
+  .review-card {
+    font-size: 0.95rem;
+    padding: 15px 15px;
+  }
+
+  .review-card h4 {
+    font-size: 0.9rem;
+  }
+}
 
 /* skills*/
 .skills {
