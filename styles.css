@@ -523,14 +523,15 @@ a {
 .reviews {
   background-color: #111; /* match About and Portfolio bg */
   color: #eee;
-  padding: 70px 40px 100px;
+  padding: 70px 20px 100px; /* less horizontal padding on small screens */
   text-align: center;
   width: 100%;
   margin: 0 auto;
+  box-sizing: border-box;
 }
 
 .reviews h2 {
-  font-size: 2.75rem;
+  font-size: clamp(1.8rem, 4vw, 2.75rem); /* fluid font size */
   margin-bottom: 50px;
   color: #ff5e62;
   font-weight: 700;
@@ -541,17 +542,21 @@ a {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  gap: 40px;
+  gap: 30px;
+  align-items: center; /* center on small screens */
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .review-card {
   background: #1a1a1a;
-  width: 40%;
+  width: 100%; /* full width on small screens */
+  max-width: 500px; /* max width on bigger screens */
   padding: 25px 30px;
   border-radius: 15px;
   box-shadow: 0 8px 25px rgba(255, 94, 98, 0.3);
   font-style: italic;
-  font-size: 1.1rem;
+  font-size: clamp(1rem, 2vw, 1.1rem);
   color: #ddd;
   transition: box-shadow 0.3s ease;
 }
@@ -565,9 +570,8 @@ a {
   font-weight: 700;
   color: #ff5e62;
   font-style: normal;
-  font-size: 1rem;
+  font-size: clamp(0.9rem, 1.5vw, 1rem);
 }
-
 /* Responsive */
 @media (min-width: 1200px) {
   .reviews h2 {
