@@ -257,7 +257,7 @@ a {
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 40px;
-  max-width: 1200px;
+  max-width: 100%;
   margin: 0 auto;
 }
 
@@ -306,7 +306,32 @@ a {
 }
 
 /* Responsive */
-@media (max-width: 992px) {
+/* Very Large Screens (e.g. 1600px+) */
+@media (min-width: 1600px) {
+  .about-text h2 {
+    font-size: 3rem;
+  }
+
+  .about-text p {
+    font-size: 1.3rem;
+  }
+
+  .about-img img {
+    max-width: 90%;
+  }
+}
+
+/* Medium Screens (Tablets and small laptops) */
+@media (max-width: 1024px) {
+  .about-wrapper {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-text, .about-img {
+    width: 100%;
+  }
+
   .about-text h2 {
     font-size: 2.2rem;
   }
@@ -314,13 +339,16 @@ a {
   .about-text p {
     font-size: 1.05rem;
   }
+
+  .about-img img {
+    max-width: 80%;
+  }
 }
 
-/* Mobile */
+/* Small Screens (Phones) */
 @media (max-width: 768px) {
-  .about-wrapper {
-    flex-direction: column;
-    text-align: center;
+  .about {
+    padding: 60px 30px;
   }
 
   .about-text h2 {
@@ -331,15 +359,16 @@ a {
     font-size: 1rem;
   }
 
-  .about-img {
-    margin-top: 30px;
+  .about-img img {
+    max-width: 100%;
+    border-radius: 12px;
   }
 }
 
-/* Extra small screens (phones < 480px) */
+/* Very Small Screens (under 480px) */
 @media (max-width: 480px) {
   .about {
-    padding: 60px 16px;
+    padding: 40px 20px;
   }
 
   .about-text h2 {
@@ -349,12 +378,17 @@ a {
   .about-text p {
     font-size: 0.95rem;
   }
+
+  .about-img img {
+    border-radius: 10px;
+  }
 }
+
 /* Project Cards */
 .portfolio {
   background-color: #111; /* keep matching About bg */
   padding: 60px 40px 100px; /* a bit less top padding for tighter flow after About, more bottom */
-  max-width: 1200px;
+  max-width: 100%;
   margin: 0 auto;
   color: #eee;
   text-align: center;
@@ -431,21 +465,60 @@ a {
 }
 
 /* Responsive */
+/* 🔳 Very Large Screens (e.g. 1600px+) - 3 cards per row */
+@media (min-width: 1400px) {
+  .project-card {
+    width: 30%;
+  }
+}
+
+/* 📱 Medium Screens (Tablets/Laptops) - 2 cards per row */
+@media (max-width: 1024px) {
+  .project-card {
+    width: 45%;
+  }
+}
+
+/* 📱 Small Screens (Mobile Portrait) - 1 card per row */
 @media (max-width: 768px) {
+  .portfolio {
+    padding: 50px 20px 80px;
+  }
+
+  .project-card {
+    width: 100%;
+  }
+
+  .project-card p {
+    font-size: 0.95rem;
+  }
+
+  .project-card a.btn {
+    width: 100%;
+    text-align: center;
+    padding: 12px 0;
+  }
+}
+
+/* 🪶 Extra Small Screens (under 480px) */
+@media (max-width: 480px) {
   .portfolio h2 {
     font-size: 2rem;
   }
 
-  .project-grid {
-    flex-direction: column;
-    align-items: center;
+  .project-card h3 {
+    font-size: 1.25rem;
   }
 
-  .project-card {
-    width: 90%;
-    max-width: 400px;
+  .project-card p {
+    font-size: 0.9rem;
+  }
+
+  .project-card a.btn {
+    font-size: 0.95rem;
   }
 }
+
 /* review*/
 .reviews {
   background-color: #111; /* match About and Portfolio bg */
@@ -562,6 +635,140 @@ a {
   font-size: 1rem;
   color: #ccc;
 }
+/* 🖥️ Very Large Screens (1400px+) */
+@media (min-width: 1400px) {
+  .skills h2 {
+    font-size: 3rem;
+  }
+
+  .skill-card h3 {
+    font-size: 1.6rem;
+  }
+
+  .skill-card ul li {
+    font-size: 1.1rem;
+  }
+}
+
+/* 📱 Medium Screens (Tablets) */
+@media (max-width: 1024px) {
+  .skills {
+    padding: 60px 30px 80px;
+  }
+
+  .skills h2 {
+    font-size: 2.2rem;
+  }
+
+  .skill-card h3 {
+    font-size: 1.3rem;
+  }
+
+  .skill-card ul li {
+    font-size: 0.95rem;
+  }
+}
+
+/* 📱 Small Screens (Mobile Portrait) */
+@media (max-width: 768px) {
+  .skills {
+    padding: 50px 20px 70px;
+  }
+
+  .skills h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+  }
+
+  .skill-card {
+    padding: 20px 16px;
+  }
+
+  .skill-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .skill-card ul li {
+    font-size: 0.9rem;
+  }
+}
+
+/* 🪶 Extra Small Devices (<480px) */
+@media (max-width: 480px) {
+  .skills h2 {
+    font-size: 1.75rem;
+  }
+
+  .skill-card {
+    padding: 18px 14px;
+  }
+
+  .skill-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .skill-card ul li {
+    font-size: 0.85rem;
+  }
+}
+/* service*/
+.what-i-do {
+  background-color: #111; /* Same as .skills */
+  padding: 80px 40px 100px;
+  color: #eee; /* light gray */
+  text-align: center;
+}
+
+.what-i-do h2 {
+  font-size: clamp(2rem, 5vw, 2.5rem);
+  margin-bottom: 50px;
+  color: #ff5e62; /* same pink accent as skills */
+  font-weight: 700;
+  letter-spacing: 1.2px;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  max-width: 88%;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.service-card {
+  background-color: #1a1a1a; /* same card bg as skills */
+  padding: 25px 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(255, 94, 98, 0.2); /* pink shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(255, 94, 98, 0.4); /* stronger pink shadow */
+}
+
+.service-card h3 {
+  color: #ff5e62; /* pink accent */
+  margin-bottom: 15px;
+  font-size: clamp(1.2rem, 2.5vw, 1.4rem);
+  font-weight: 600;
+}
+
+.service-card p {
+  font-size: clamp(0.95rem, 2vw, 1rem);
+  color: #ccc; /* same light gray */
+  line-height: 1.6;
+}
+
+/* Optional: bigger padding for very large screens */
+@media (min-width: 1600px) {
+  .what-i-do {
+    padding: 8rem 2rem;
+  }
+}
+
 
 /* contact*/
 .contact {

@@ -22,6 +22,7 @@
   <!-- <link rel="icon" href="#" type="image/x-icon" /> -->
 
   <!-- External CSS & Libraries -->
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600&family=Syne:wght@700&display=swap" rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
@@ -30,39 +31,47 @@
 <body>
 
   <!-- HERO -->
-  <section class="hero">
-    <div id="hero-box">
-  <div class="hero-content-wrapper">
-  <div class="hero-text">
-    <h1>Hello, I'm <br><span class="highlight">Yousuf Mansoor</span></h1>
-    <p class="subtitle">I am a Full-Stack Web Developer passionate about building clean, user-friendly websites.</p>
-    <a href="resume/My_CV.pdf" class="btn secondary" download>Download My CV</a>
-    <a href="#portfolio" class="btn">See My Work</a>
-  </div>
-  <div class="hero-img">
-    <img src="#" alt="Yousuf - Full-Stack Developer" />
-  </div>
-</div>
+  <section class="hero" data-aos="fade-in" data-aos-delay="100">
+  <div id="hero-box">
+    <div class="hero-content-wrapper">
+      
+      <!-- Text Section -->
+      <div class="hero-text" data-aos="fade-right" data-aos-delay="200">
+        <h1>Hello, I'm <br><span class="highlight">Yousuf Mansoor</span></h1>
+        <p class="subtitle">I am a Full-Stack Web Developer passionate about building clean, user-friendly websites.</p>
+        
+        <!-- Buttons -->
+        <a href="resume/My_CV.pdf" class="btn secondary" download data-aos="zoom-in" data-aos-delay="400">Download My CV</a>
+        <a href="#portfolio" class="btn" data-aos="zoom-in" data-aos-delay="500">See My Work</a>
+      </div>
 
-  <!-- Glowing HTML Tags -->
-  <div class="floating-tags">
-    <span class="tag">&lt;div&gt;</span>
-    <span class="tag">&lt;/div&gt;</span>
-    <span class="tag">&lt;h1&gt;</span>
-    <span class="tag">&lt;/h1&gt;</span>
-    <span class="tag">&lt;section&gt;</span>
-    <span class="tag">&lt;/section&gt;</span>
-  </div>
+      <!-- Image Section -->
+      <div class="hero-img" data-aos="zoom-out" data-aos-delay="300">
+        <img src="WWG.png" alt="Yousuf - Full-Stack Developer" />
+      </div>
+    </div>
+
+    <!-- Glowing HTML Tags -->
+    <div class="floating-tags">
+      <span class="tag" data-aos="fade-up" data-aos-delay="600">&lt;div&gt;</span>
+      <span class="tag" data-aos="fade-up" data-aos-delay="650">&lt;/div&gt;</span>
+      <span class="tag" data-aos="fade-up" data-aos-delay="700">&lt;h1&gt;</span>
+      <span class="tag" data-aos="fade-up" data-aos-delay="750">&lt;/h1&gt;</span>
+      <span class="tag" data-aos="fade-up" data-aos-delay="800">&lt;section&gt;</span>
+      <span class="tag" data-aos="fade-up" data-aos-delay="850">&lt;/section&gt;</span>
+    </div>
   </div>
 </section>
+
 
 <!-- ABOUT -->
 <section id="about" class="about">
   <div class="about-wrapper">
+    
     <!-- About Text -->
-    <div class="about-text" data-aos="fade-right">
-      <h2>About Me</h2>
-      <p>
+    <div class="about-text" data-aos="fade-right" data-aos-delay="100">
+      <h2 data-aos="fade-right" data-aos-delay="200">About Me</h2>
+      <p data-aos="fade-right" data-aos-delay="300">
         I’m a <strong>Full-Stack Web Developer</strong> passionate about creating clean, user-friendly websites and web apps. 
         With expertise in <strong>HTML, CSS, JavaScript, Laravel, WordPress</strong>, and more, I love combining logical thinking with creative design. 
         Whether it's building custom features or improving SEO, I'm always up for a challenge.
@@ -70,48 +79,37 @@
     </div>
 
     <!-- About Image -->
-    <div class="about-img" data-aos="fade-left">
-      <img src="index.png" alt="About You Mansoor" />
+    <div class="about-img" data-aos="zoom-in" data-aos-delay="400">
+      <img src="WWG.png" alt="About Yousuf Mansoor" />
     </div>
+
   </div>
 </section>
 
 <!--PORTFOLIO-->
-<section id="portfolio" class="portfolio">
-  <h2>My Work</h2>
+<section id="portfolio" class="portfolio" data-aos="fade-up" data-aos-delay="100">
+  <h2 data-aos="zoom-in" data-aos-delay="200">My Work</h2>
+
   <div class="project-grid">
-    <div class="project-card" data-aos="fade-up">
+    <div class="project-card" data-aos="fade-up" data-aos-delay="300">
       <img src="index.png" alt="WorldWondersGuide" />
       <h3>WorldWondersGuide</h3>
-      <p>WorldWondersGuide is an interactive site showcasing iconic global monuments with stunning visuals and insightful descriptions to inspire and educate visitors.</p>
+      <p>
+        WorldWondersGuide is an interactive site showcasing iconic global monuments with stunning visuals and insightful descriptions to inspire and educate visitors.
+      </p>
       <a href="http://youmansoor.github.io/" target="_blank" class="btn">View Project</a>
     </div>
 
-    <!-- Add more project cards here -->
-  </div>
-</section>
-
-<!--REVIEW-->
-<section id="reviews" class="reviews">
-  <h2>Client Reviews</h2>
-  <div class="review-cards">
-    <div class="review-card" data-aos="fade-up">
-      <p>"Loving the portfolio site clean, professional, and super easy to use! 😍
-Really appreciate how quick you were to make tweaks and how well you understood my vision.
-Working with you was smooth and fun!
-If I notice anything later, I’ll let you know but for now, great job & thank you! 🙌"</p>
-      <h4>- Freelancer, Designer</h4>
-    </div>
-
-    <!-- Add more review cards as needed -->
+    <!-- Add more project cards with increasing delays -->
   </div>
 </section>
 
 <!--SKILLS-->
-<section id="skills" class="skills">
-  <h2>My Skills</h2>
+<section id="skills" class="skills" data-aos="fade-up" data-aos-delay="100">
+  <h2 data-aos="zoom-in" data-aos-delay="200">My Skills</h2>
+  
   <div class="skills-grid">
-    <div class="skill-card">
+    <div class="skill-card" data-aos="fade-up" data-aos-delay="300">
       <h3>Frontend</h3>
       <ul>
         <li>HTML5</li>
@@ -121,7 +119,7 @@ If I notice anything later, I’ll let you know but for now, great job & thank y
       </ul>
     </div>
 
-    <div class="skill-card">
+    <div class="skill-card" data-aos="fade-up" data-aos-delay="400">
       <h3>Backend</h3>
       <ul>
         <li>PHP</li>
@@ -130,7 +128,7 @@ If I notice anything later, I’ll let you know but for now, great job & thank y
       </ul>
     </div>
 
-    <div class="skill-card">
+    <div class="skill-card" data-aos="fade-up" data-aos-delay="500">
       <h3>Tools & Tech</h3>
       <ul>
         <li>Git & GitHub</li>
@@ -140,7 +138,7 @@ If I notice anything later, I’ll let you know but for now, great job & thank y
       </ul>
     </div>
 
-    <div class="skill-card">
+    <div class="skill-card" data-aos="fade-up" data-aos-delay="600">
       <h3>Optimization</h3>
       <ul>
         <li>SEO</li>
@@ -150,33 +148,79 @@ If I notice anything later, I’ll let you know but for now, great job & thank y
   </div>
 </section>
 
-<!--CONTACT-->
-<section id="contact" class="contact">
-  <h2>Get In Touch</h2>
-  <p class="contact-intro">Have a project in mind, a question, or just want to say hello? I'm always open to discussing new opportunities.</p>
+<section id="what-i-do" class="what-i-do" data-aos="fade-up" data-aos-delay="100">
+  <h2 data-aos="zoom-in" data-aos-delay="200">What I Do</h2>
 
-  <form action="" method="post" class="contact-form">
-  <input type="text" name="name" placeholder="Your Name" required />
-  <input type="email" name="email" placeholder="Your Email" required />
-  <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-  <button type="submit" class="btn">Send Message</button>
-</form>
-
-  <div class="contact-info">
-  <a href="mailto:your-email@example.com">
-    <i class="fas fa-envelope"></i>
-    Email
-  </a>
-  <a href="https://github.com/youmansoor" target="_blank">
-    <i class="fab fa-github"></i>
-    Github
-  </a>
-</div>
+  <div class="services-grid">
+    <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+      <h3>Web Design</h3>
+      <p>I create visually appealing, user-friendly designs using modern tools like Figma and responsive layouts.</p>
+    </div>
+    
+    <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+      <h3>Web Development</h3>
+      <p>Full-stack development with HTML, CSS, JavaScript, PHP, and Laravel to build robust websites.</p>
+    </div>
+    
+    <div class="service-card" data-aos="fade-up" data-aos-delay="500">
+      <h3>WordPress Development</h3>
+      <p>Custom WordPress themes, plugin integration, and site optimization for performance and SEO.</p>
+    </div>
+    
+    <div class="service-card" data-aos="fade-up" data-aos-delay="600">
+      <h3>Website Optimization</h3>
+      <p>Improve site speed, mobile responsiveness, and search engine visibility using best practices.</p>
+    </div>
+  </div>
 </section>
 
-<footer class="footer">
+
+<!--REVIEW-->
+<section id="reviews" class="reviews" data-aos="fade-up" data-aos-delay="100">
+  <h2 data-aos="zoom-in" data-aos-delay="200">Client Reviews</h2>
+
+  <div class="review-cards">
+    <div class="review-card" data-aos="fade-up" data-aos-delay="300">
+      <p>"Loving the portfolio site clean, professional, and super easy to use! 😍
+      Really appreciate how quick you were to make tweaks and how well you understood my vision.
+      Working with you was smooth and fun!
+      If I notice anything later, I’ll let you know but for now, great job & thank you! 🙌"</p>
+      <h4>- Freelancer, Designer</h4>
+    </div>
+  </div>
+</section>
+
+
+<!--CONTACT-->
+<section id="contact" class="contact" data-aos="fade-up" data-aos-delay="100">
+  <h2 data-aos="zoom-in" data-aos-delay="200">Get In Touch</h2>
+  <p class="contact-intro" data-aos="fade-right" data-aos-delay="300">
+    Have a project in mind, a question, or just want to say hello? I'm always open to discussing new opportunities.
+  </p>
+
+  <form action="" method="post" class="contact-form" data-aos="fade-up" data-aos-delay="400">
+    <input type="text" name="name" placeholder="Your Name" required />
+    <input type="email" name="email" placeholder="Your Email" required />
+    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+    <button type="submit" class="btn">Send Message</button>
+  </form>
+
+  <div class="contact-info" data-aos="fade-up" data-aos-delay="500">
+    <a href="mailto:your-email@example.com">
+      <i class="fas fa-envelope"></i>
+      Email
+    </a>
+    <a href="https://github.com/youmansoor" target="_blank">
+      <i class="fab fa-github"></i>
+      Github
+    </a>
+  </div>
+</section>
+
+
+<footer class="footer" data-aos="fade-up" data-aos-delay="100">
   <p>&copy; 2025 You Mansoor. All rights reserved.</p>
-  <div class="social-icons">
+  <div class="social-icons" data-aos="fade-up" data-aos-delay="200">
     <a href="https://github.com/youmansoor" target="_blank"><i class="fab fa-github"></i></a>
     <a href="mailto:your-email@example.com"><i class="fas fa-envelope"></i></a>
   </div>
@@ -185,7 +229,10 @@ If I notice anything later, I’ll let you know but for now, great job & thank y
 
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
-  AOS.init();
+  AOS.init({
+    duration:800,
+    once:true
+  });
 </script>
 </body>
 </html>
