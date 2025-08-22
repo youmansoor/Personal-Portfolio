@@ -518,6 +518,123 @@ a {
     font-size: 0.95rem;
   }
 }
+/* EXPERIENCE SECTION */
+.experience {
+  background-color: #111;
+  color: #eee;
+  padding: 80px 40px 100px;
+  text-align: center;
+}
+
+.experience h2 {
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+  color: #ff5e62;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+}
+
+.experience-text {
+  font-size: 1.1rem;
+  color: #ccc;
+  line-height: 1.7;
+  max-width: 800px;
+  margin: 0 auto 50px;
+  padding: 0 10px;
+}
+
+/* GRID LAYOUT */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.stat-card {
+  background-color: #1a1a1a;
+  padding: 25px 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(255, 94, 98, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(255, 94, 98, 0.6);
+}
+
+.stat-card h3 {
+  color: #ff5e62;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.stat-card p {
+  color: #ccc;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+/* RESPONSIVENESS */
+@media (max-width: 1024px) {
+  .experience h2 {
+    font-size: 2.2rem;
+  }
+  .experience-text {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .experience {
+    padding: 60px 20px 80px;
+  }
+
+  .experience h2 {
+    font-size: 2rem;
+  }
+
+  .stat-card h3 {
+    font-size: 1.8rem;
+  }
+
+  .stat-card p {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .experience {
+    padding: 50px 15px 60px;
+  }
+
+  .experience h2 {
+    font-size: 1.8rem;
+  }
+
+  .experience-text {
+    font-size: 0.95rem;
+  }
+
+  .stats-grid {
+    gap: 20px;
+  }
+
+  .stat-card {
+    padding: 20px 15px;
+  }
+
+  .stat-card h3 {
+    font-size: 1.6rem;
+  }
+
+  .stat-card p {
+    font-size: 0.9rem;
+  }
+}
 
 /* review*/
 .reviews {
